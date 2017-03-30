@@ -1,24 +1,14 @@
-# README
+My First Labs http://myfirstlabs.com/
+A self start up company
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My First Labs website 
+Ruby v2.3
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Things left to include in ReadMe:
+System dependencies
+Configuration
+Database creation
+Database initialization
+How to run the test suite
+Services (job queues, cache servers, search engines, etc.)
+Deployment instructions
