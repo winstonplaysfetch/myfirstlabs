@@ -1,4 +1,10 @@
-<div>Name: <%= @project.name %></div>
-<div>Description: <%= @project.description %></div>
-<div>image: <%= @project.image %></div>
-<div>video: <%= @project.video %></div>
+<body>
+<div id="container">
+    <h3><%= @project.name %></h3>
+    <p><%= @project.description %></p>
+    <img src= <%= @project.image %> alt="imgur.com" style="width:500px;">
+    <br>
+    <a href=<%= @project.video %>> Instructionional Video</a></a>
+</div>
+</div>
+</body>
