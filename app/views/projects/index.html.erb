@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+<h1>PROJECTS</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Image</th>
+    <th>Video</th>
+  </tr>
+ 
+  <% @projects.each do |project| %>
+    <tr>
+      <td><%= project.name %></td>
+      <td><%= project.description %></td>
+      <td><%= project.image %></td>
+      <td><%= project.video %></td>
+      <td><%= link_to 'Show', project_path(project) %></td>
+    </tr>
+  <% end %>
+  <tr><td><%= link_to 'New Project', new_project_path %></td></tr>
+</table>
+=======
 <h1>Listing Projects</h1>
 
 <%= link_to 'New Project', new_project_path %>
+>>>>>>> c1fb616b82e16d725abe3e61242783464ab04661
