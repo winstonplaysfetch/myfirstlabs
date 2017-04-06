@@ -1,3 +1,19 @@
 <h1>Listing Projects</h1>
 
 <%= link_to 'New Project', new_project_path %>
+<p>
+    
+    
+    
+</p>
+
+<% @projects.each do |project| %>
+<tr>
+    <td><%= project.name %></td>
+    <br>
+    <img src= <%= project.image %> alt="imgur.com" style="width:100px;">
+    <br>
+    <td><%= link_to 'Show', project_path(project) %></td> 
+    <br>
+</tr>
+<% end %>
