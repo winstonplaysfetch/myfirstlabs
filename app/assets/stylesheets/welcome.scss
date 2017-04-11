@@ -44,3 +44,23 @@ color: #EEE8AA;
 background-color: #331E0E;
 transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
+
+/* START NAVBAR STYLE */
+header {
+  background-color: rgba(222,184,135,1.0);
+  margin: auto;
+  width: 800px
+}
+.bar {
+    width: 100%;
+    height: 100%;
+}
+.link {
+  width: 25%;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+  font-family: Courier New;
+  font-size: 175%;
+}
+/* END NAVBAR STYLE  */
