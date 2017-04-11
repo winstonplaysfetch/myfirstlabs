@@ -8,5 +8,9 @@
     <a href=<%= @project.video %>> Instructionional Video</a></a>
 </div>
 </div>
+<%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %><br>
 <%= link_to 'Back', projects_path %>
+</div>
+
+
 </body>
