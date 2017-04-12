@@ -7,9 +7,11 @@
     <br>
     <a href=<%= @project.video %>> Instructionional Video</a></a>
 </div>
-</div>
-<%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %><br>
-<%= link_to 'Back', projects_path %>
+
+</div id="show-links">
+<%= link_to 'Edit', self.find(params[:id]) %>
+<%= link_to 'Destroy', self.find(params[:id]), method: :delete, data: { confirm: 'Are you sure?' } %><br>
+<%= link_to 'Back To Projects', projects_path %>
 </div>
 
 
