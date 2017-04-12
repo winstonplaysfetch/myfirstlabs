@@ -1,5 +1,18 @@
-<div>Name: <%= @project.name %></div>
-<div>Description: <%= @project.description %></div>
-<div>image: <%= @project.image %></div>
-<div>video: <%= @project.video %></div>
-<%= link_to 'Back', projects_path %>
+<%= render 'welcome/navbar' %>
+<body>
+<div id="container">
+    <h3><%= @project.name %></h3>
+    <p><%= @project.description %></p>
+    <img src= <%= @project.image %> alt="imgur.com" style="width:500px;">
+    <br>
+    <a href=<%= @project.video %>> Instructionional Video</a></a>
+</div>
+
+</div id="show-links">
+<%= link_to 'Edit', edit_project_path(@project) %>
+<%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+<%= link_to 'Back To Projects', projects_path %>
+</div>
+
+
+</body>

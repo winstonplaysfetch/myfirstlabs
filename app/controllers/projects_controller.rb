@@ -4,6 +4,11 @@ class ProjectsController < ApplicationController
   end
   
   def new
+     @projects = Project.new
+  end
+  
+  def show
+    @project = Project.find(params[:id])
   end
   
   def create
@@ -13,16 +18,28 @@ class ProjectsController < ApplicationController
     redirect_to @project
   end
   
-  def show
+  def edit
     @project = Project.find(params[:id])
   end
-
-  def index
-    @projects = Project.all
+  
+  def update
+    @project = Project.find(params[:id])
+    if @project.update(project_params)
+      redirect_to @project
+    else
+      render 'edit'
+    end
   end
-end
+  
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    
+    redirect_to projects_path
+  end
 
 private
   def project_params
     params.require(:project).permit(:name, :description, :image, :video)
   end
+end

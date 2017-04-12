@@ -14,3 +14,7 @@ Services (job queues, cache servers, search engines, etc.)
 Deployment instructions
 
 Contributors: Vincent Popp,
+Brandy Overman,
+Takinah Scales,
+Tommy Huynh,
+Jennifer Daly
