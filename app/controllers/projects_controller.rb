@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
   end
   
   def new
+     @projects = Project.new
   end
   
   def show
