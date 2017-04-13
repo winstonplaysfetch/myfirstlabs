@@ -1,19 +1,19 @@
 <p>
   <strong>Title:</strong>
-  <%= @article.title %>
+  <%= @project.title %>
 </p>
  
 <p>
   <strong>Text:</strong>
-  <%= @article.text %>
+  <%= @project.text %>
 </p>
 <p>
   <strong>Email:</strong>
-  <%= @article.email %>
+  <%= @project.email %>
 </p>
 
 <h2>Comments</h2>
-<% @article.comments.each do |comment| %>
+<% @project.comments.each do |comment| %>
   <p>
     <strong>Commenter:</strong>
     <%= comment.commenter %>
