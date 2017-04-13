@@ -1,7 +1,7 @@
-class FeedbackController < ApplicationController
+class FeedbacksController < ApplicationController
   def create
     @project = Project.find(params[:project_id])
-    @feedback = @project.feedback.create(feedback_params)
+    @feedback = @project.feedbacks.create(feedback_params)
     redirect_to project_path(@project)
   end
   

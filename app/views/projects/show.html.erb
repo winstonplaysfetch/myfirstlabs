@@ -14,5 +14,36 @@
 <%= link_to 'Back To Projects', projects_path %>
 </div>
 
-
+<% @project.feedbacks.each do |feedback| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= feedback.commenter %>
+  </p>
+   <p>
+    <strong>title:</strong>
+    <%= feedback.title %>
+  </p>
+  <p>
+    <strong>Comment:</strong>
+    <%= feedback.body %>
+  </p>
+<% end %>
+<h2>Add a feedback:</h2>
+<%= form_for([@project, @project.feedbacks.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+      <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 </body>

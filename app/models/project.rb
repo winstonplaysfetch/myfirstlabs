@@ -1,3 +1,3 @@
 class Project < ApplicationRecord
-  has_many :feedback
+  has_many :feedbacks
 end

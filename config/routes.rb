@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :projects do
-    resources :feedback
+    resources :feedbacks
   end
   
   root 'welcome#index'
