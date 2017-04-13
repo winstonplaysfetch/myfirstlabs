@@ -1,45 +1,8 @@
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @project.text %>
-</p>
-<p>
-  <strong>Email:</strong>
-  <%= @project.email %>
-</p>
+<% @projects.each do |project| %>
+<tr>
+<td><%= project.name %></td>
+</tr>
 
-<h2>Comments</h2>
-<% @project.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
- 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
-<h2>Add a comment:</h2>
-<%= form_for([@projects, @projects.comments.build]) do |f| %>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
-  </p>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.email_field :commenter %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<p>If you have any questions, comments or suggestions, please e-mail support@myfirstlabs.com</p>
+
 <%= link_to 'Back', projects_path %>
