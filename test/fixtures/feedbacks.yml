@@ -4,10 +4,12 @@ one:
   commenter: MyString
   title: MyString
   body: MyText
+  is_approved: false
   project: one
 
 two:
   commenter: MyString
   title: MyString
   body: MyText
+  is_approved: false
   project: two
