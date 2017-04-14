@@ -1,20 +1,19 @@
-<%= render 'welcome/navbar' %>
-<h1>FUN PROJECTS</h1>
+<%= render 'welcome/navbar' %> <!-- Navigation Bar -->
 
-<%= link_to 'New Project', new_project_path %>
-<p>
-    
-    
-    
-</p>
+<h1>PROJECT LIST</h1>
 
+<!-- Start of staff only items -->
+  <%= link_to 'New Project', new_project_path %>
+
+  <br><br><br><br><br> <!-- Much needed whitespace -->
+<!-- End of staff only items -->
+
+<!-- Below loop will show the name and tumbnail with a link to the projects -->
 <% @projects.each do |project| %>
-<tr>
-    <td><%= project.name %></td>
+    <%= project.name %>
     <br>
     <img src= <%= project.image %> alt="imgur.com" style="width:100px;">
     <br>
-    <td><%= link_to 'Show', project_path(project) %></td> 
-    <br>
-</tr>
+    <%= link_to 'Show', project_path(project) %>
+    <br><br><br> <!-- Whitespace to divide different projects better -->
 <% end %>
