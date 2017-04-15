@@ -16,7 +16,7 @@
     <% @projects.each do |project| %>
         <%= project.name %>
         <br>
-        <img src= <%= project.image %> alt="imgur.com" style="width:100px;">
+        <img src= <%= project.image %> alt="imgur.com" style="width:200px;">
         <br>
         <%= link_to 'Show', project_path(project) %>
         <br><br><br> <!-- Whitespace to divide different projects better -->

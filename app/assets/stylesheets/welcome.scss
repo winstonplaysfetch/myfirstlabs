@@ -14,7 +14,11 @@ h1 {
 	font-size: 3em;
 }
 
-#container body {
+#container h1 {
+	font-size: 5em !important;
+}
+
+#container {
     width: 800px; 
     margin-left: auto; 
     margin-right:auto;
