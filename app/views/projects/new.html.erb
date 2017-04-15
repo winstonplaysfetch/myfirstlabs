@@ -1,6 +1,7 @@
 <%= render 'welcome/navbar' %> <!-- Navigation Bar -->
 
-<h1>NEW PROJECT</h1>
+<div id="container">
+<h2>NEW PROJECT</h2>
 
 <!-- The following loop is just a form for input -->
 <%= form_for :project, url: projects_path do |f| %>
@@ -14,3 +15,4 @@
 <br><br><br><br><br> <!-- Much needed whitespace -->
 
 <%= link_to 'Back', projects_path %>
+</div>

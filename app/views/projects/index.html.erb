@@ -1,19 +1,25 @@
+<div id="nav_wrapper">
 <%= render 'welcome/navbar' %> <!-- Navigation Bar -->
+</div>
 
-<h1>PROJECT LIST</h1>
-
-<!-- Start of staff only items -->
-  <%= link_to 'New Project', new_project_path %>
-
-  <br><br><br><br><br> <!-- Much needed whitespace -->
-<!-- End of staff only items -->
-
-<!-- Below loop will show the name and tumbnail with a link to the projects -->
-<% @projects.each do |project| %>
-    <%= project.name %>
-    <br>
-    <img src= <%= project.image %> alt="imgur.com" style="width:100px;">
-    <br>
-    <%= link_to 'Show', project_path(project) %>
-    <br><br><br> <!-- Whitespace to divide different projects better -->
-<% end %>
+<div id="container">
+  <body>
+    <h2>PROJECT LIST</h2>
+    
+    
+    <!-- Start of staff only items -->
+    <%= link_to 'New Project', new_project_path %>
+    <br><br><br><br><br> <!-- Much needed whitespace -->
+    <!-- End of staff only items -->
+    
+    <!-- Below loop will show the name and tumbnail with a link to the projects -->
+    <% @projects.each do |project| %>
+        <%= project.name %>
+        <br>
+        <img src= <%= project.image %> alt="imgur.com" style="width:100px;">
+        <br>
+        <%= link_to 'Show', project_path(project) %>
+        <br><br><br> <!-- Whitespace to divide different projects better -->
+    <% end %>
+  </body>
+</div>

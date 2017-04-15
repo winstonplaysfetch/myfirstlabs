@@ -1,3 +1,6 @@
+<%= render 'welcome/navbar' %> <!-- Navigation Bar -->
+
+<div id="container">
 <% @projects.each do |project| %>
 <tr>
 <td><%= project.name %></td>
@@ -6,3 +9,4 @@
 <p>If you have any questions, comments or suggestions, please e-mail support@myfirstlabs.com</p>
 
 <%= link_to 'Back', projects_path %>
+</div>

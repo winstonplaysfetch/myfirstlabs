@@ -1,6 +1,15 @@
-<header><table class="bar"><tr>
-  <td class="link"><nav><%= link_to 'Home', controller: 'welcome' %></nav></td>
-  <td class="link"><nav><%= link_to 'Projects', controller: 'projects' %></nav></td>
-  <td class="link"><nav>Feedback</nav></td><!-- TODO: Create Feedback Page -->
-  <td class="link"><nav>Staff</nav></td><!-- TODO: Setup authentication -->
-</tr></table></header>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Almendra+Display" rel="stylesheet">
+</head>
+
+<div id="nav_wrapper">
+<ul>
+  <li><%= link_to 'Staff Login', root_path %></li><!-- TODO: Setup authentication -->
+  <li><%= link_to 'Feedback', root_path %></li><!-- TODO: Create Feedback Page -->
+  <li><%= link_to 'Projects', projects_path %></li>
+  <li><%= link_to 'Home', root_path %></li>
+  <h1>My First Labs</h1>
+</ul>
+</div>
