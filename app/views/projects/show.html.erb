@@ -21,6 +21,7 @@
     <%= link_to 'Back To Projects', projects_path %>
   </div>
 
+<div id="container">
   <h3>User Feedback</h3>
   <!-- Below loop will show the the feedback on the project -->
   <% @project.feedbacks.each do |feedback| %>
@@ -39,5 +40,6 @@
     <p><%= f.label 'Visible' %>: <%= f.check_box :is_approved %></p> <!-- Only Staff will see -->
     <p><%= f.submit %></p>
   <% end %>
+</div>
 
 </body>
