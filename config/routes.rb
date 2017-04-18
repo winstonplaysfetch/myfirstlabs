@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :projects do
     resources :feedbacks
   end
+  
   resources :feedbacks do
     get 'feedbacks'
   end
