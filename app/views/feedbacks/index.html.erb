@@ -1,4 +1,28 @@
-<h1>UNDER CONSTRUCTION</h1>
-NO PEEKING!!! >:(
+<%= render 'welcome/navbar' %> <!-- Navigation Bar -->
 
-^.^'
+<h1>FEEDBACK LIST</h1>
+
+
+<table class="info">
+  <tr>
+    <th class="info">Project</th>
+    <th class="info">Name</th>
+    <th class="info">Subject</th>
+    <th class="info">Body</th>
+    <th class="info">Visible</th>
+    <th class="info">Toggle</th>
+    <th class="info">Delete</th>
+  </tr>
+  <!-- Below loop will show the all the feedback information and actions that can be taken -->
+  <% @feedback.each do |feedback| %>
+  <tr>
+    <td class="info"><%= feedback.project_id %></td>
+    <td class="info"><%= feedback.commenter %></td>
+    <td class="info"><%= feedback.title %></td>
+    <td class="info"><%= feedback.body %></td>
+    <td class="info"><%= feedback.is_approved %></td>
+    <td class="info">Toggle</td><!-- Need to add visibility toggle for staff -->
+    <td class="info">Delete</td><!-- Need to add delete for staff -->
+  </tr>
+  <% end %>
+</table>

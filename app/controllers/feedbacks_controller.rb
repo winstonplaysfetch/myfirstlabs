@@ -5,6 +5,10 @@ class FeedbacksController < ApplicationController
     redirect_to project_path(@project)
   end
   
+  def index
+    @feedback = Feedback.all
+  end
+  
   private
     def feedback_params
       params.require(:feedback).permit(:commenter, :title, :body, :is_approved)
