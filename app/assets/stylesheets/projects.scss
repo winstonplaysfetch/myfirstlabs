@@ -71,10 +71,10 @@ h1 {
 	}
 	
 #nav_wrapper a:link, a:visited {
-	color: #EEE8AA;
+	color: black;
 	display:block;
-	front-weight:bold;
-	background-color: #331E0E;
+	font-weight:bold;
+	background-color: #A8632D;
 	width: 120px;
 	text-align: center;
 	padding: 10px;
@@ -83,5 +83,5 @@ h1 {
 	
 #nav_wrapper a:hover, a:active {
 	color: #EEE8AA;
-	background-color: #A8632D;
+	background-color: #331E0E;
 	}
