@@ -1,6 +1,12 @@
 <%= render 'welcome/navbar' %> <!-- Navigation Bar -->
 
 <body>
-UNDER CONSTRUCTION!
-
+  <div id="container"> <!-- Project information -->
+    <p>Name: <%= @feedback.commenter %></p>
+    <h2>Subject: <%= @feedback.title %></h2>
+    <p>Body: <%= @feedback.body %></p>
+    <p>Visible: <%= @feedback.is_approved %></p>
+  </div>
 </body>
+
+<%= link_to 'Return to Feedbacks', feedbacks_path %>

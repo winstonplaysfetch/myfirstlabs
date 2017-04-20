@@ -2,13 +2,21 @@
 
 <h1>Feedback Approval Form</h1>
 
-<%= form_for :feedback, url: feedback_path, method: :patch do |f| %>
-  <p><%= f.label :commenter %>: <%= f.text_field :commenter %></p>
-  <p><%= f.label :is_approved %>: <%= f.check_box :is_approved %></p>
-  <p><%= f.label :body %><br><%= f.text_area :body %></p>
-  <p><%= f.submit %></p>
-<% end %>
 
-<br><br><br><br><br> <!-- Much needed whitespace -->
+  <div id="container"> <!-- Project information -->
+    <p><%= @feedback.commenter %></p>
+    <h2><%= @feedback.title %></h2>
+    <p><%= @feedback.body %></p>
+    
+    <br><br><br>
+    
+    <%= form_for :feedback, url: feedback_path, method: :patch do |f| %>
+      <p><%= f.label 'Visible (checked means yes)' %>: <%= f.check_box :is_approved %></p>
+      <p><%= f.submit %></p>
+    <% end %>
+  </div>
+
+
+<br><br><br> <!-- Much needed whitespace -->
 
 <%= link_to 'Back', feedbacks_path %>
