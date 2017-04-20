@@ -9,6 +9,12 @@ class FeedbacksController < ApplicationController
     @feedback = Feedback.all
   end
   
+  def destroy
+    @feedback = Feedback.find(params[:id])
+    @feedback.destroy
+    redirect_to feedbacks_path
+  end
+  
   private
     def feedback_params
       params.require(:feedback).permit(:commenter, :title, :body, :is_approved)
