@@ -1,0 +1,22 @@
+<%= render 'welcome/navbar' %> <!-- Navigation Bar -->
+
+<h1>Feedback Approval Form</h1>
+
+
+  <div id="container"> <!-- Project information -->
+    <p><%= @feedback.commenter %></p>
+    <h2><%= @feedback.title %></h2>
+    <p><%= @feedback.body %></p>
+    
+    <br><br><br>
+    
+    <%= form_for :feedback, url: feedback_path, method: :patch do |f| %>
+      <p><%= f.label 'Visible (checked means yes)' %>: <%= f.check_box :is_approved %></p>
+      <p><%= f.submit %></p>
+    <% end %>
+  </div>
+
+
+<br><br><br> <!-- Much needed whitespace -->
+
+<%= link_to 'Back', feedbacks_path %>
