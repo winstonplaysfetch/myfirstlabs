@@ -21,13 +21,15 @@
     <td class="info"><%= feedback.title %></td>
     <td class="info"><%= feedback.body %></td>
     <td class="info"><%= feedback.is_approved %></td>
-    <td class="info">Toggle</td><!-- Need to add visibility toggle for staff -->
+    <td class="info">
+      <%= link_to 'Edit Feedback', edit_feedback_path(feedback) %>
+    </td>
     <td class="info">
       <%= link_to 'Remove Feedback', [feedback.project, feedback],
         method: :delete,
         data: { confirm: 'Are you sure?' }
       %>
-    </td><!-- Need to add delete for staff -->
+    </td>
   </tr>
   <% end %>
 </table>
