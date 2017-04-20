@@ -6,20 +6,26 @@
   <body>
     <h2>PROJECT LIST</h2>
     
-    
     <!-- Start of staff only items -->
     <%= link_to 'New Project', new_project_path %>
-    <br><br><br><br><br> <!-- Much needed whitespace -->
+    <br><br> <!-- Much needed whitespace -->
     <!-- End of staff only items -->
     
     <!-- Below loop will show the name and tumbnail with a link to the projects -->
+    <ul class="project_tile_holder">
     <% @projects.each do |project| %>
+      <li class = "project_tile">
         <%= project.name %>
         <br>
-        <img src= <%= project.image %> alt="imgur.com" style="width:200px;">
+        <img src= <%= project.image %> alt="imgur.com" style="width: 200px;">
         <br>
         <%= link_to 'Show', project_path(project) %>
-        <br><br><br> <!-- Whitespace to divide different projects better -->
+        <br><br><br> 
+      </li><!-- Whitespace to divide different projects better -->
     <% end %>
-  </body>
+    </ul>
 </div>
+  </body>
+
+
+
