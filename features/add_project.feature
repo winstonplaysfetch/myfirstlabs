@@ -6,10 +6,9 @@ Feature: Add a new project entry
   Scenario: As an administrator I need to be able to navigate from the homepage to the project pages
     Given I am on the homepage
     When I click on "Enter My First Labs" link
-    Then I should be on "Projects" page
-    When I click on "New"
-    Then I should be on "New Project" page
-    And I should see the "name" field
-    And I should see the "description" field
-    And I should see the "image" field
-    And I should see the "video" field
+    Then I should be on "PROJECT LIST" page
+    When I click on "New Project" link
+    Then I should be on "NEW PROJECT" page
+   
+    And I should see the "Back" link
+   
