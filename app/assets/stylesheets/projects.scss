@@ -15,7 +15,7 @@ h1 {
 }
 
 #container {
-    width: 800px; 
+    width: 1000px; 
     margin-left: auto; 
     margin-right:auto;
     text-align:center; 
@@ -85,3 +85,22 @@ h1 {
 	color: #EEE8AA;
 	background-color: #331E0E;
 	}
+
+.project_tile_holder {
+	box-sizing:border-box;
+}
+
+.project_tile {
+	float: left;
+	display: block;
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-top: 50px;
+	width: 200px;
+	position:relative;
+}
+
+.project_tile img {
+	border: 2px solid black;
+    border-radius: 10px;
+}
