@@ -8,16 +8,14 @@
 <body>
 <h2>Contact Page</h2>
   <div class="container">
-    <label><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-    <br/><br/>
-    <label><b>Message</b></label>
-    <input type="message" placeholder="Enter message" name="message" required>
-    <br/><br/>
-    <button type="submit">Send</button>
+    <%= form_for :contact, url: contacts_path do |f| %>
+      <p><%= f.label :email %>: <%= f.text_field :email %></p>
+      <p><%= f.label :body %>: <%= f.text_field :body %></p>
+      <p><%= f.submit %></p>
+    <% end %>
 </body>
 </html>
 </html>
-
 <%= link_to 'Back', projects_path %>
 </div>
+<!-- Contact.column_names for column names. >
