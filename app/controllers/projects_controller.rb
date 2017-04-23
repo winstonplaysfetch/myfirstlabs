@@ -12,10 +12,13 @@ class ProjectsController < ApplicationController
   end
   
   def create
-    @project = Project.new(project_params)
+    @projects = Project.new(project_params)
     
-    @project.save
-    redirect_to @project
+    if @projects.save
+      redirect_to @projects
+    else
+      render 'new'
+    end
   end
   
   def edit

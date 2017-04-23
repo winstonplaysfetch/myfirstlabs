@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   
   resources :feedbacks do
+    resources :projects
     get 'feedbacks'
   end
   

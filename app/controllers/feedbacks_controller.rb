@@ -4,6 +4,10 @@ class FeedbacksController < ApplicationController
     @feedback = @project.feedbacks.create(feedback_params)
     redirect_to project_path(@project)
   end
+  
+  def new
+    @feedback = new
+  end
 
   def show
     @feedback = Feedback.find(params[:id])
