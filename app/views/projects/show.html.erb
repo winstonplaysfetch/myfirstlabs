@@ -5,9 +5,19 @@
   <div id="container"> <!-- Project information -->
     <h2><%= @project.name %></h2>
     <p><%= @project.description %></p>
-    <img src= <%= @project.image %> alt="imgur.com">
+    <% unless @project.image == '' then %> <!-- Check if image is linked -->
+      <img src= <%= @project.image %> alt="imgur.com" style="width: 500px;">
+    <% else %> <!-- If not picture is linked -->
+      <br><br><br><br> <!-- Muched needed whitespace -->
+      Image Pending!
+      <br><br><br><br> <!-- Much needed whitespace -->
+    <% end %>
     <br>
-    <a href=<%= @project.video %>> Instructionional Video</a></a>
+    <% unless @project.video == '' then %> <!-- Check if video is linked -->
+      <a href=<%= @project.video %>> Instructionional Video</a>
+    <% else %> <!-- If not video is linked -->
+      <a href=<%= @project.video %>> Video Pending!</a>
+    <% end %>    
   </div>
 
   <br><br> <!-- Need whitespace -->
@@ -23,22 +33,31 @@
 
 <div id="container">
   <h3>User Feedback</h3>
+  <% count = 0 %> <!-- Counter variable to count approved feedbacks -->
   <!-- Below loop will show the the feedback on the project -->
   <% @project.feedbacks.each do |feedback| %>
-    <p>Name: <%= feedback.commenter %></p>
-    <p>Subject: <%= feedback.title %></p>
-    <p>Body: <%= feedback.body %></p>
-    <p>Visible: <%= feedback.is_approved %></p> <!-- Only Staff will see -->
-    <br> <!-- Need whitespace -->
+    <% if feedback.is_approved == true then %>
+      <% unless feedback.commenter == '' then %> <!-- If feedback is not anonymous -->
+        <p>Name: <%= feedback.commenter  %></p>
+      <% else %> <!-- If anonymous -->
+        <p>Name: Anonymous</p>
+      <% end %>
+      <h4>Subject: <%= feedback.title %></h4>
+      <p>Body: <%= feedback.body %></p>
+      <br> <!-- Need whitespace -->
+      <% count = count + 1 %>
+    <% end %>
+  <% end %>
+  <% if count == 0 then %> <!-- If no approved feedbacks -->
+    <p> No Feedback Reported Yet! </p>
   <% end %>
 
-  <h3>Give us some feedback:</h3> <!-- Form for feeback input -->
+  <h4>Give us some feedback:</h4> <!-- Form for feeback input -->
   <%= form_for([@project, @project.feedbacks.build]) do |f| %>
-    <p><%= f.label 'Name' %>: <%= f.text_field :commenter %></p>
-    <p><%= f.label 'Subject' %>: <%= f.text_field :title %></p>
-    <p><%= f.label 'Body' %>: <%= f.text_area :body %></p>
-    <p><%= f.label 'Visible' %>: <%= f.check_box :is_approved %></p> <!-- Only Staff will see -->
-    <p><%= f.submit %></p>
+    <p><%= f.label 'Name' %>: <%= f.text_field :commenter, placeholder: "Optional" %></p>
+    <p><%= f.label 'Subject' %>: <%= f.text_field :title, placeholder: "Required" %></p>
+    <p><%= f.label 'Body' %>: <%= f.text_area :body, placeholder: "Required" %></p>
+    <p><%= f.submit "Submit Feedback" %></p>
   <% end %>
 </div>
 

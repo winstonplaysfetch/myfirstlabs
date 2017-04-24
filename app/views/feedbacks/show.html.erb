@@ -2,7 +2,12 @@
 
 <body>
   <div id="container"> <!-- Project information -->
-    <p>Name: <%= @feedback.commenter %></p>
+    Name: 
+    <% if @feedback.commenter == '' then %> <!-- Check if anonymous -->
+      Anonymous
+    <% else %>
+      <%= @feedback.commenter %>
+    <% end %>    
     <h2>Subject: <%= @feedback.title %></h2>
     <p>Body: <%= @feedback.body %></p>
     <p>Visible: <%= @feedback.is_approved %></p>
