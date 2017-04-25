@@ -15,8 +15,8 @@
     <ul class="project_tile_holder">
     <% @projects.each do |project| %>
       <li class = "project_tile">
-        <strong><%= project.name %></strong>
-        <br>
+        <strong><%= link_to project.name , project_path(project) %></strong>
+        <br><br>
         <% unless project.image == '' then %> <!-- Check if image is linked -->
           <img src= <%= project.image %> alt="imgur.com" style="width: 200px;">
         <% else %> <!-- If not picture is linked -->
@@ -25,7 +25,7 @@
           <br><br><br><br> <!-- Much needed whitespace -->
         <% end %>
         <br>
-        <%= link_to 'Show', project_path(project) %>
+        
         <br><br><br> 
       </li><!-- Whitespace to divide different projects better -->
     <% end %>
