@@ -3,12 +3,23 @@
   <head>
     <title>Myfirstlabs</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Almendra+Display" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <html lang="en-US">
+    <div id="nav_wrapper">
+    <ul>
+      <li><%= link_to 'Staff Login', root_path %></li><!-- TODO: Setup authentication -->
+      <li><%= link_to 'Feedback', feedbacks_path %></li><!-- TODO: Create Feedback Page -->
+      <li><%= link_to 'Contact', contacts_path %></li>
+      <li><%= link_to 'Projects', projects_path %></li>
+      <li><%= link_to 'Home', root_path %></li>
+      <h1>My First Labs</h1>
+    </ul>
+    </div>
     <%= yield %>
   </body>
 </html>
