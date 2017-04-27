@@ -9,7 +9,7 @@ coffee-rails 4.2, jquery-rails, turbolinks 5, jbuilder 2.5,
 omniauth-google-oauth2 0.2.1
 
 development gems: web-console 3.3.0, listen 3.0.5, spring, 
-spring-water-listen 2.0.0 
+spring-watcher-listen 2.0.0 
 
 To run tests: cucumber
 gems: cucumber, cucumber-rails, database_cleaner
