@@ -1,12 +1,9 @@
-Given(/^I am on the home page$/) do
-  visit root_path
+
+Given(/^I am on the contacts page$/) do
+    visit contacts_path
 end
 
-When(/^I click on the "([^"]*)" link$/) do |link_name|
-  click_link link_name
+Then(/^I should see "([^"]*)"$/) do |page_name|
+    expect(page).to have_content(page_name)
 end
-
-
-
-
 
