@@ -1,6 +1,6 @@
 <div id="container">
   <h2>FEEDBACK LIST</h2>
-  
+
   <table class="info">
     <tr>
       <th class="info">Project</th>
@@ -26,12 +26,13 @@
       <td class="info"><%= feedback.body %></td>
       <td class="info"><%= feedback.is_approved %></td>
       <td class="info">
-        <%= link_to 'Edit Feedback', edit_feedback_path(feedback) %>
+        <%= link_to 'Edit Feedback', edit_feedback_path(feedback), :class=>"edit" %>
       </td>
       <td class="info">
         <%= link_to 'Remove Feedback', [feedback.project, feedback],
           method: :delete,
-          data: { confirm: 'Are you sure?' }
+          data: { confirm: 'Are you sure?' },
+          :class=>"delete"
         %>
       </td>
     </tr>
