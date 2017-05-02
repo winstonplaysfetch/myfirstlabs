@@ -12,4 +12,128 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+#nav_wrapper ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	}
+	
+#nav_wrapper li {
+	opacity: 0.5;
+	float: right;
+	text-align:center;
+	}
+	
+#nav_wrapper a:link, a:visited {
+	color: black;
+	display:block;
+	font-weight:bold;
+	background-color: #A8632D;
+	width: 120px;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+	}
+	
+#nav_wrapper a:hover, a:active {
+	color: #EEE8AA;
+	background-color: #331E0E;
+	}
+
+/* CENTER PAGE CONTENT */
+	#container {
+	    width: 960px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+	}
+
+/* START OF LINK FORMATTING */
+	/* Admin Adding New Content */
+		.new:link, .new:visited {
+			color: rgb(128, 254, 128);
+			background-color: rgb(0, 73, 0);
+			border: 1px solid black;
+			padding: 12px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 10px;
+			transition: background-color 0.3s ease-out, color 0.3s ease-out;
+		}
+		
+		.new:hover, .new:active {
+			background-color: rgb(0, 191, 0);
+		}
+		
+	/* Admin Changing Existing Content */
+		.edit:link, .edit:visited {
+			color: rgb(128, 179, 254);
+			background-color: rgb(0, 0, 128);
+			border: 1px solid black;
+			padding: 12px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 10px;
+			transition: background-color 0.3s ease-out, color 0.3s ease-out;
+		}
+		
+		.edit:hover, .edit:active {
+			background-color: rgb(0, 0, 254);
+		}
+	
+	/* Admin Removing Existing Content */
+		.delete:link, .delete:visited {
+			color: rgb(254, 128, 128);
+			background-color: rgb(86, 0, 0);
+			border: 1px solid black;
+			padding: 12px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 10px;
+			transition: background-color 0.3s ease-out, color 0.3s ease-out;
+		}
+		
+		.delete:hover, .delete:active {
+			background-color: rgb(191, 0, 0);
+		}
+
+	/* Forward Navigation */
+		.forward:link, .forward:visited {
+			color: rgb(0, 0, 0);
+			background-color: rgb(168, 99, 45);
+			border: 1px solid black;
+			padding: 12px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 10px;
+			transition: background-color 0.3s ease-out, color 0.3s ease-out;
+		}
+		
+		.forward:hover, .forward:active {
+			color: rgb(238, 232, 170);
+			background-color: rgb(51, 30, 14);
+		}
+	
+	/* Backward Navigation */
+		.backward:link, .backward:visited {
+			color: rgb(221, 221, 221);
+			background-color: rgb(42, 42, 42);
+			border: 1px solid black;
+			padding: 12px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 10px;
+			transition: background-color 0.3s ease-out, color 0.3s ease-out;
+		}
+		
+		.backward:hover, .backward:active {
+			background-color: rgb(135, 135, 135);
+		}
+/* END OF LINK FORMATTING */
