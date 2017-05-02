@@ -25,20 +25,3 @@ h1 {
     text-align:center; 
 }
 
-#container a:link, a:visited {
-	color: black;
-	background-color: #A8632D;
-	border: 1px solid black;
-	padding: 12px 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 10px;
-	transition: background-color 0.3s ease-out, color 0.3s ease-out;
-}
-
-#container a:hover, a:active {
-	color: #EEE8AA;
-	background-color: #331E0E;
-	transition: background-color 0.3s ease-in, color 0.3s ease-in;
-}

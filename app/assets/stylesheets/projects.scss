@@ -32,59 +32,12 @@ h1 {
     border-radius: 10px;
 }
 
-#container a:link, a:visited {
-	color: black;
-	background-color: #A8632D;
-	border: 1px solid black;
-	padding: 12px 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 10px;
-	transition: background-color 0.3s ease-out, color 0.3s ease-out;
-}
-
-#container a:hover, a:active {
-	color: #EEE8AA;
-	background-color: #331E0E;
-	transition: background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
 #show-links {
     width: 800px; 
     margin-left: auto; 
     margin-right:auto;
     text-align:center;
 }
-
-#nav_wrapper ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	}
-	
-#nav_wrapper li {
-	opacity: 0.5;
-	float: right;
-	text-align:center;
-	}
-	
-#nav_wrapper a:link, a:visited {
-	color: black;
-	display:block;
-	font-weight:bold;
-	background-color: #A8632D;
-	width: 120px;
-	text-align: center;
-	padding: 10px;
-	text-decoration: none;
-	}
-	
-#nav_wrapper a:hover, a:active {
-	color: #EEE8AA;
-	background-color: #331E0E;
-	}
 
 .project_tile_holder {
 	box-sizing:border-box;
