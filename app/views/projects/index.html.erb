@@ -1,33 +1,31 @@
 <div id="container">
-  <body>
-    <h2>PROJECT LIST</h2>
+  <h2>PROJECT LIST</h2>
 
-    <!-- Start of staff only items -->
-      <%= link_to 'New Project', new_project_path %>
-      <br><br> <!-- Much needed whitespace -->
-    <!-- End of staff only items -->
-
-    <!-- Below loop will show the name and tumbnail with a link to the projects -->
-    <ul class="project_tile_holder">
-    <% @projects.each do |project| %>
-      <li class = "project_tile">
-        <strong><%= link_to project.name , project_path(project) %></strong>
-        <br><br>
-        <% unless project.image == '' then %> <!-- Check if image is linked -->
-          <img src= <%= project.image %> alt="imgur.com" style="width: 200px;">
-        <% else %> <!-- If not picture is linked -->
-          <br><br><br><br> <!-- Muched needed whitespace -->
-          Image Pending!
-          <br><br><br><br> <!-- Much needed whitespace -->
-        <% end %>
-        <br>
-        
-        <br><br><br> 
-      </li><!-- Whitespace to divide different projects better -->
+  <!-- Start of staff only items -->
+    <% if current_user %>
+      <%= link_to 'New Project', new_project_path, :class=>"new" %>
     <% end %>
-    </ul>
+  <!-- End of staff only items -->
+
+  <br><br> <!-- Much needed whitespace -->
+
+  <!-- Below loop will show the name and tumbnail with a link to the projects -->
+  <ul class="project_tile_holder">
+  <% @projects.each do |project| %>
+    <li class = "project_tile">
+      <%= link_to project.name , project_path(project), :class=>"forward" %>
+      <br><br>
+      <% unless project.image == '' then %> <!-- Check if image is linked -->
+        <img src= <%= project.image %> alt="imgur.com" style="width: 200px;">
+      <% else %> <!-- If not picture is linked -->
+        <br><br><br><br> <!-- Muched needed whitespace -->
+        Image Pending!
+        <br><br><br><br> <!-- Much needed whitespace -->
+      <% end %>
+
+      <br><br><br> 
+    </li><!-- Whitespace to divide different projects better -->
+  <% end %>
+  </ul>
+  <br><br><br>
 </div>
-  </body>
-
-
-

@@ -1,8 +1,8 @@
 <div id="container"> <!-- Feedback information -->
   <h2>FEEDBACK APPROVAL FORM</h2>
-  
+
   <br> <!-- Much needed whitespace -->
-  
+
   <p>Name: <%= @feedback.commenter %></p>
   <h3>Subject: <%= @feedback.title %></h3>
   <p>Body: <%= @feedback.body %></p>
@@ -14,8 +14,8 @@
     <br> <!-- Much needed whitespace -->
     <p><%= f.submit "Save Feedback Approval Settings" %></p>
   <% end %>
+
+  <br><br><br> <!-- Much needed whitespace -->
+
+  <%= link_to 'Back to Feedback List', feedbacks_path, :class=>"backward" %>
 </div>
-
-<br><br><br> <!-- Much needed whitespace -->
-
-<%= link_to 'Back', feedbacks_path %>

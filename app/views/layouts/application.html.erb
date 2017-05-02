@@ -9,16 +9,19 @@
   </head>
 
   <body>
-    <html lang="en-US">
     <div id="nav_wrapper">
-    <ul>
-      <li><%= link_to 'Staff Login', root_path %></li><!-- TODO: Setup authentication -->
-      <li><%= link_to 'Feedback', feedbacks_path %></li><!-- TODO: Create Feedback Page -->
-      <li><%= link_to 'Contact', contacts_path %></li>
-      <li><%= link_to 'Projects', projects_path %></li>
-      <li><%= link_to 'Home', root_path %></li>
-      <h1>My First Labs</h1>
-    </ul>
+      <ul>
+        <% if current_user %>
+          <li><%= link_to "Signout", signout_path, id: "sign_out" %></li>
+          <li><%= link_to 'Feedback', feedbacks_path %></li>
+        <% else %>
+          <li><%= link_to "Staff Login", "/auth/google_oauth2", id: "sign_in" %></li>
+        <% end %>
+        <li><%= link_to 'Contact', contacts_path %></li>
+        <li><%= link_to 'Projects', projects_path %></li>
+        <li><%= link_to 'Home', root_path %></li>
+      </ul>
+       <h1 align="left" >My First Labs</h1>
     </div>
     <%= yield %>
   </body>
