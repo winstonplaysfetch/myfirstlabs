@@ -1,13 +1,18 @@
 <div id="container"> <!-- Project information -->
-  Name: 
-  <% if @feedback.commenter == '' then %> <!-- Check if anonymous -->
-    Anonymous
+  <% if current_user %>
+    Name: 
+    <% if @feedback.commenter == '' then %> <!-- Check if anonymous -->
+      Anonymous
+    <% else %>
+      <%= @feedback.commenter %>
+    <% end %>    
+    <h2>Subject: <%= @feedback.title %></h2>
+    <p>Body: <%= @feedback.body %></p>
+    <p>Visible: <%= @feedback.is_approved %></p>
+    <br><br><br>
+    <%= link_to 'Return to Feedbacks', feedbacks_path, :class=>"backward" %>
   <% else %>
-    <%= @feedback.commenter %>
-  <% end %>    
-  <h2>Subject: <%= @feedback.title %></h2>
-  <p>Body: <%= @feedback.body %></p>
-  <p>Visible: <%= @feedback.is_approved %></p>
-  <br><br><br>
-  <%= link_to 'Return to Feedbacks', feedbacks_path, :class=>"backward" %>
+    <br><br><br>
+    <h2>LOGIN TO VIEW CONTENT!</h2>
+  <% end %>
 </div>

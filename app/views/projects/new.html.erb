@@ -1,25 +1,30 @@
 <div id="container">
-  <h2>NEW PROJECT</h2>
-
-  <!-- The following loop is just a form for input -->
-  <%= form_for :project, url: projects_path do |f| %>
-    <% if @projects.errors.any? %> <!-- Check for form input errors -->
-      <div>
-        <%= pluralize(@projects.errors.count, "error") %> prohibited this project from being saved:<br>
-        <% @projects.errors.full_messages.each do |msg| %>
-          <%= msg %><br>
-        <% end %>
-      </div>
+  <% if current_user %>
+    <h2>NEW PROJECT</h2>
+  
+    <!-- The following loop is just a form for input -->
+    <%= form_for :project, url: projects_path do |f| %>
+      <% if @projects.errors.any? %> <!-- Check for form input errors -->
+        <div>
+          <%= pluralize(@projects.errors.count, "error") %> prohibited this project from being saved:<br>
+          <% @projects.errors.full_messages.each do |msg| %>
+            <%= msg %><br>
+          <% end %>
+        </div>
+      <% end %>
+      <!-- Start of input form -->
+      <p><%= f.label :name %>: <%= f.text_field :name, placeholder: "Required" %></p>
+      <p><%= f.label :image %>: <%= f.text_field :image, placeholder: "Optional"  %></p>
+      <p><%= f.label :video %>: <%= f.text_field :video, placeholder: "Optional"  %></p>
+      <p><%= f.label :description %><br><%= f.text_area :description, placeholder: "Required" %></p>
+      <p><%= f.submit "Create Project Record" %></p>
     <% end %>
-    <!-- Start of input form -->
-    <p><%= f.label :name %>: <%= f.text_field :name, placeholder: "Required" %></p>
-    <p><%= f.label :image %>: <%= f.text_field :image, placeholder: "Optional"  %></p>
-    <p><%= f.label :video %>: <%= f.text_field :video, placeholder: "Optional"  %></p>
-    <p><%= f.label :description %><br><%= f.text_area :description, placeholder: "Required" %></p>
-    <p><%= f.submit "Create Project Record" %></p>
+  
+    <br><br><br><!-- Much needed whitespace -->
+  
+    <%= link_to 'Back', projects_path, :class=>"backward" %>
+  <% else %>
+    <br><br><br>
+    <h2>LOGIN TO VIEW CONTENT!</h2>
   <% end %>
-
-  <br><br><br><!-- Much needed whitespace -->
-
-  <%= link_to 'Back', projects_path, :class=>"backward" %>
 </div>
