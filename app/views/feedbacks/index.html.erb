@@ -1,41 +1,45 @@
 <div id="container">
-  <h2>FEEDBACK LIST</h2>
-
-  <table class="info">
-    <tr>
-      <th class="info">Project</th>
-      <th class="info">Name</th>
-      <th class="info">Subject</th>
-      <th class="info">Body</th>
-      <th class="info">Visible</th>
-      <th class="info">Toggle</th>
-      <th class="info">Delete</th>
-    </tr>
-    <!-- Below loop will show the all the feedback information and actions that can be taken -->
-    <% @feedback.each do |feedback| %>
-    <tr>
-      <td class="info"><%= feedback.project.name %></td>
-      <td class="info">
-        <% if feedback.commenter == '' then %> <!-- Check if anonymous -->
-          Anonymous
-        <% else %> <!-- If not anonymous -->
-          <%= feedback.commenter %>
-        <% end %>        
-      </td>
-      <td class="info"><%= feedback.title %></td>
-      <td class="info"><%= feedback.body %></td>
-      <td class="info"><%= feedback.is_approved %></td>
-      <td class="info">
-        <%= link_to 'Edit Feedback', edit_feedback_path(feedback), :class=>"edit" %>
-      </td>
-      <td class="info">
-        <%= link_to 'Remove Feedback', [feedback.project, feedback],
-          method: :delete,
-          data: { confirm: 'Are you sure?' },
-          :class=>"delete"
-        %>
-      </td>
-    </tr>
-    <% end %>
-  </table>
+  <% if current_user %>
+    <h2>FEEDBACK LIST</h2>
+  
+    <table class="info">
+      <tr>
+        <th class="info">Project</th>
+        <th class="info">Name</th>
+        <th class="info">Subject</th>
+        <th class="info">Body</th>
+        <th class="info">Visible</th>
+        <th class="info">Toggle</th>
+        <th class="info">Delete</th>
+      </tr>
+      <!-- Below loop will show the all the feedback information and actions that can be taken -->
+      <% @feedback.each do |feedback| %>
+      <tr>
+        <td class="info"><%= feedback.project.name %></td>
+        <td class="info">
+          <% if feedback.commenter == '' then %> <!-- Check if anonymous -->
+            Anonymous
+          <% else %> <!-- If not anonymous -->
+            <%= feedback.commenter %>
+          <% end %>        
+        </td>
+        <td class="info"><%= feedback.title %></td>
+        <td class="info"><%= feedback.body %></td>
+        <td class="info"><%= feedback.is_approved %></td>
+        <td class="info">
+          <%= link_to 'Edit Feedback', edit_feedback_path(feedback), :class=>"edit" %>
+        </td>
+        <td class="info">
+          <%= link_to 'Remove Feedback', [feedback.project, feedback],
+            method: :delete,
+            data: { confirm: 'Are you sure?' },
+            :class=>"delete"
+          %>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <h2>LOGIN TO VIEW CONTENT</h2>
+  <% end %>
 </div>
