@@ -1,10 +1,10 @@
 <div id="container">
   <h2>Contact Page</h2>
   <%= form_for :contact, url: contacts_path do |f| %>
-    <p><%= f.label :email %>: <%= f.text_field :email %></p>
-    <p><%= f.label :body %>: <%= f.text_area :body %></p>
+    <p><%= f.label :email %>: <%= f.text_field :email, :name=>"email" %></p>
+    <p><%= f.label :body %>: <%= f.text_area :body, :name=>"body" %></p>
     <p><%= f.submit %></p>
   <% end %>
   <br><br><br>
-  <%= link_to 'Back to Projects', projects_path, :class=>"backward" %>
+  <%= link_to 'Back to Projects', projects_path, :class=>"backward", :name=>"submit" %>
 </div>
