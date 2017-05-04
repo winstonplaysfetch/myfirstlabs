@@ -1,4 +1,4 @@
-Given /^"([^"]*)" is logged in$/ do |email|
+Given (/^"([^"]*)" is logged in$/) do |email|
   @current_user = Factory(:user, :email => email)
   log_in
 end
