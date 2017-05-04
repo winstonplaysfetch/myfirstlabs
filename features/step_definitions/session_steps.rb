@@ -1,9 +1,16 @@
+#FactoryGirl.find_definitions
+
 Given (/^"([^"]*)" is logged in$/) do |email|
-  @current_user = Factory(:user, :email => email)
+  @current_user = FactoryGirl.create(:user, :email => email)
   log_in
 end
 
 private
+
+Given(/^I am on "([^"]*)" page$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
 
 def log_in
   if Capybara.current_driver == :webkit

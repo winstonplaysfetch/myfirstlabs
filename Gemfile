@@ -44,6 +44,7 @@ group  :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'capybara-webkit'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
