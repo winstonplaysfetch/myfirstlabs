@@ -1,8 +1,3 @@
-
-Given(/^I am on the homepage$/) do
-    visit root_path
-end
-
 When(/^I click on "([^"]*)" link$/) do |page_name|
     click_link page_name
 end
@@ -13,9 +8,4 @@ end
 
 When(/^I click on "([^"]*)"$/) do |page_name|
     expect(page).to have_content(page_name)
-end
-
-Then(/^I should see the "([^"]*)" link$/) do |page_name|
-        click_link page_name
-
 end
