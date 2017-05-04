@@ -1,8 +1,3 @@
-
-Given(/^I am on the homepage$/) do
-    visit root_path
-end
-
 When(/^I click on "([^"]*)" link$/) do |page_name|
     click_link page_name
 end
