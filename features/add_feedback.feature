@@ -8,7 +8,7 @@ Feature: Submit Feedback
     Given I am on the homepage
     And There is a project already created by an admin called "Robot" with the description "This is an andriod!"
     When I click on the "Projects" link
-    Then I should be on the "PROJECT LIST" page
+    Then I should be on the "Project List" page
     And I should see the "Robot" link
     Then I click on the "Robot" link
     Then I should be on the "Robot" page

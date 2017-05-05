@@ -1,16 +1,38 @@
 <div id="container"> <!-- Project information -->
   <% if current_user %>
+    <h2>Subject: <%= @feedback.title %></h2>
+    <p>Body <%= @feedback.body %></p>
+    
+    <br><br>
+    
     Name: 
     <% if @feedback.commenter == '' then %> <!-- Check if anonymous -->
       Anonymous
     <% else %>
       <%= @feedback.commenter %>
-    <% end %>    
-    <h2>Subject: <%= @feedback.title %></h2>
-    <p>Body: <%= @feedback.body %></p>
-    <p>Visible: <%= @feedback.is_approved %></p>
+    <% end %>
+    
+    <br><br>
+    
+    Visible:
+    <% if @feedback.is_approved %>
+      Yes
+    <% else %>
+      No
+    <% end %>
+    
     <br><br><br>
+    
     <%= link_to 'Return to Feedbacks', feedbacks_path, :class=>"backward" %>
+    
+    <br><br><br>
+    
+    <%= link_to 'Change Feedback Settings', edit_feedback_path(@feedback), :class=>"edit" %>
+    <%= link_to 'Remove Feedback', [@feedback.project, @feedback],
+      method: :delete,
+      data: { confirm: 'Are you sure?' },
+      :class=>"delete"
+    %>
   <% else %>
     <h2>LOGIN TO VIEW CONTENT</h2>
   <% end %>
