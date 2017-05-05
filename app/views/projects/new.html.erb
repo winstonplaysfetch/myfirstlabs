@@ -1,6 +1,6 @@
 <div id="container">
   <% if current_user %>
-    <h2>NEW PROJECT</h2>
+    <h2>New Project</h2>
   
     <!-- The following loop is just a form for input -->
     <%= form_for :project, url: projects_path do |f| %>
@@ -34,7 +34,7 @@
   
     <br><br><br><!-- Much needed whitespace -->
   
-    <%= link_to 'Back', projects_path, :class=>"backward" %>
+    <%= link_to 'Back to Projects', projects_path, :class=>"backward" %>
   <% else %>
     <h2>LOGIN TO VIEW CONTENT</h2>
   <% end %>

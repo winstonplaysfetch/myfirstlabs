@@ -1,6 +1,6 @@
 <div id="container">
   <% if current_user %>
-    <h2>EDITING PROJECT</h2>
+    <h2>Editing Project</h2>
     
     <!-- The following loop is just a form for input -->
     <%= form_for :project, url: project_path(@project), method: :patch do |f| %>
@@ -34,7 +34,7 @@
     
     <br><br><br><!-- Much needed whitespace -->
     
-    <%= link_to 'Back', project_path(@project), :class=>"backward" %>
+    <%= link_to 'Back  to Projects', project_path(@project), :class=>"backward" %>
   <% else %>
     <h2>LOGIN TO VIEW CONTENT</h2>
   <% end %>
