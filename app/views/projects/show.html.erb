@@ -15,16 +15,19 @@
     Video Pending!
   <% end %>
   
-  <br><br><br> <!-- Need whitespace -->
-
-  <%= link_to 'Back to Projects', projects_path, :class=>"backward" %>
-    <!-- Start of staff only items -->
-    <br><br><br> <!-- Need whitespace -->
+  <!-- Start of staff only items -->
     <% if current_user %>
+      <br><br><br> <!-- Need whitespace -->
       <%= link_to 'Edit Project', edit_project_path(@project), :class=>"edit" %>
       <%= link_to 'Remove Project', @project, method: :delete, data: { confirm: 'Are you sure you want to delete this project?' }, :class=>"delete" %><br>
     <% end %>
-    <!-- End of staff only items -->
+  <!-- End of staff only items -->
+  
+  <br><br><br> <!-- Need whitespace -->
+
+  <%= link_to 'Back to Projects', projects_path, :class=>"backward" %>
+
+  <br><br><br> <!-- Need whitespace -->
   
   <h3>User Feedback</h3>
   <% count = 0 %> <!-- Counter variable to count approved feedbacks -->
@@ -46,6 +49,8 @@
     <p> No Feedback Reported Yet! </p>
   <% end %>
 
+  <br><br>
+
   <h4>Give us some feedback:</h4> <!-- Form for feeback input -->
   <%= form_for([@project, @project.feedbacks.build]) do |f| %>
     <p>
@@ -62,4 +67,8 @@
       </p>
     <p><%= f.submit "Submit Feedback" %></p>
   <% end %>
+  
+  <br><br><br>
+
+  <%= link_to 'Back to Projects', projects_path, :class=>"backward" %>
 </div>

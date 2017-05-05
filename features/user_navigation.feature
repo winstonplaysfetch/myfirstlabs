@@ -28,5 +28,3 @@ Feature: Navigate website
     Then I click on the "Robot" link
     And I should be on the "Robot" page
     And I should see the "Back to Projects" link
-    Then I click on the "Back to Projects" link
-    And I should be on the "Project List" page
