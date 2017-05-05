@@ -137,3 +137,52 @@
 			background-color: rgb(135, 135, 135);
 		}
 /* END OF LINK FORMATTING */
+
+/* START OF FORM FORMATTING */
+	form {
+    margin-left: auto;
+    margin-right: auto;
+		width: 50%;
+		outline: 2px solid rgb(221, 221, 221);
+	}
+	
+	/* Submit button */
+		input[type="submit"] {
+			color: rgb(128, 254, 128);
+			background-color: rgb(0, 73, 0);
+			border: 1px solid black;
+			padding: 12px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 10px;
+			transition: background-color 0.3s ease-out, color 0.3s ease-out;
+		}
+			
+		input[type="submit"]:hover {
+			background-color: rgb(0, 191, 0);
+			cursor: pointer;
+		}
+		
+		input[type="submit"]:active {
+			cursor: auto;
+		}
+	
+	/* Textarea */
+		textarea {
+			width: 95%;
+			height: 200px;
+			resize: none;
+		}
+	
+	/* Textbox */
+		input[type="text"] {
+			width: 95%;
+		}
+	
+	/* Checkbox */	
+		input[type="checkbox"] {
+			width: 50px;
+			height: 50px;
+		}
+/* END OF FORM FORMATTING */
