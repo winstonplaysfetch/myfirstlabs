@@ -13,10 +13,22 @@
         </div>
       <% end %>
       <!-- Start of input form -->
-      <p><%= f.label :name %>: <%= f.text_field :name, placeholder: "Required"  %></p>
-      <p><%= f.label :image %>: <%= f.text_field :image, placeholder: "Optional"  %></p>
-      <p><%= f.label :video %>: <%= f.text_field :video, placeholder: "Optional" %></p>
-      <p><%= f.label :description %><br><%= f.text_area :description, placeholder: "Required"  %></p>
+      <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name, placeholder: "Required" %>
+      </p>
+      <p>
+        <%= f.label :image %><br>
+        <%= f.text_field :image, placeholder: "Optional"  %>
+      </p>
+      <p>
+        <%= f.label :video %><br>
+        <%= f.text_field :video, placeholder: "Optional"  %>
+      </p>
+      <p>
+        <%= f.label :description %><br>
+        <%= f.text_area :description, placeholder: "Required" %>
+      </p>
       <p><%= f.submit "Save Project Changes" %></p>
     <% end %>
     

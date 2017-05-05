@@ -48,9 +48,18 @@
 
   <h4>Give us some feedback:</h4> <!-- Form for feeback input -->
   <%= form_for([@project, @project.feedbacks.build]) do |f| %>
-    <p><%= f.label 'Name' %>: <%= f.text_field :commenter, placeholder: "Optional" %></p>
-    <p><%= f.label 'Subject' %>: <%= f.text_field :title, placeholder: "Required" %></p>
-    <p><%= f.label 'Body' %>: <%= f.text_area :body, placeholder: "Required" %></p>
+    <p>
+      <%= f.label 'Name' %><br>
+      <%= f.text_field :commenter, placeholder: "Optional" %>
+    </p>
+    <p>
+      <%= f.label 'Subject' %><br>
+      <%= f.text_field :title, placeholder: "Required" %>
+    </p>
+    <p>
+      <%= f.label 'Body' %><br>
+      <%= f.text_area :body, placeholder: "Required" %>
+      </p>
     <p><%= f.submit "Submit Feedback" %></p>
   <% end %>
 </div>

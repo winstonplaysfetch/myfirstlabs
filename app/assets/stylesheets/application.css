@@ -170,6 +170,7 @@
 	
 	/* Textarea */
 		textarea {
+			background-color: rgb(221, 221, 221);
 			width: 95%;
 			height: 200px;
 			resize: none;
@@ -177,6 +178,7 @@
 	
 	/* Textbox */
 		input[type="text"] {
+			background-color: rgb(221, 221, 221);
 			width: 95%;
 		}
 	

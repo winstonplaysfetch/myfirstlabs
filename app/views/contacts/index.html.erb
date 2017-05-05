@@ -1,8 +1,14 @@
 <div id="container">
   <h2>Contact Page</h2>
   <%= form_for :contact, url: contacts_path do |f| %>
-    <p><%= f.label :email %>: <%= f.text_field :email %></p>
-    <p><%= f.label :body %>: <%= f.text_area :body %></p>
+    <p>
+      <%= f.label :email %><br>
+      <%= f.text_field :email, placeholder: "Optional" %>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body, placeholder: "Optional" %>
+    </p>
     <p><%= f.submit %></p>
   <% end %>
   <br><br><br>
