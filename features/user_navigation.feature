@@ -13,7 +13,7 @@ Feature: Navigate website
     But I should not see the "Feedback" link
     And I should not see the "Signout" link
     When I click on the "Projects" link
-    Then I should be on the "PROJECT LIST" page
+    Then I should be on the "Project List" page
     And I should see the "Robot" link
     But I should not see the "New Project" link
     Then I click on the "Robot" link
@@ -24,9 +24,7 @@ Feature: Navigate website
     And I should be on the "Contact Page" page
     And I should see the "Back to Projects" link
     Then I click on the "Back to Projects" link
-    And I should be on the "PROJECT LIST" page
+    And I should be on the "Project List" page
     Then I click on the "Robot" link
     And I should be on the "Robot" page
-    And I should see the "Back To Projects" link
-    Then I click on the "Back To Projects" link
-    And I should be on the "PROJECT LIST" page
+    And I should see the "Back to Projects" link

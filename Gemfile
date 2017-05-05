@@ -42,9 +42,7 @@ group  :test do
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'database_cleaner'
-  gem 'rspec-rails'
-  gem 'capybara-webkit'
-  gem "factory_girl_rails", "~> 4.0"
+  gem 'rspec-expectations'
 end
 
 group :development do
