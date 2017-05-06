@@ -1,41 +1,36 @@
 <div id="container">
   <% if current_user %>
-    <h2>FEEDBACK LIST</h2>
+    <h2>Feedback List</h2>
   
     <table class="info">
       <tr>
-        <th class="info">Project</th>
-        <th class="info">Name</th>
-        <th class="info">Subject</th>
-        <th class="info">Body</th>
-        <th class="info">Visible</th>
-        <th class="info">Toggle</th>
-        <th class="info">Delete</th>
+        <th class="info-1">Project</th>
+        <th class="info-2">Name</th>
+        <th class="info-3">Subject</th>
+        <th class="info-4">Visible</th>
+        <th class="info-5">Link to Details</th>
       </tr>
       <!-- Below loop will show the all the feedback information and actions that can be taken -->
       <% @feedback.each do |feedback| %>
       <tr>
-        <td class="info"><%= feedback.project.name %></td>
-        <td class="info">
+        <td class="info-1"><%= feedback.project.name %></td>
+        <td class="info-2">
           <% if feedback.commenter == '' then %> <!-- Check if anonymous -->
             Anonymous
           <% else %> <!-- If not anonymous -->
             <%= feedback.commenter %>
           <% end %>        
         </td>
-        <td class="info"><%= feedback.title %></td>
-        <td class="info"><%= feedback.body %></td>
-        <td class="info"><%= feedback.is_approved %></td>
-        <td class="info">
-          <%= link_to 'Edit Feedback', edit_feedback_path(feedback), :class=>"edit" %>
+        <td class="info-3"><%= feedback.title %></td>
+        <td class="info-4">
+          <% if feedback.is_approved %>
+            Yes
+          <% else %>
+            No
+          <% end %>
         </td>
-        <td class="info">
-          <%= link_to 'Remove Feedback', [feedback.project, feedback],
-            method: :delete,
-            data: { confirm: 'Are you sure?' },
-            :class=>"delete"
-          %>
-        </td>
+        <td class="info-5"><%= link_to "View Feedback Details", feedback_path(feedback), :class=>"forward" %></td>
+
       </tr>
       <% end %>
     </table>
