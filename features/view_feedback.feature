@@ -10,7 +10,7 @@ Feature: View Feedback
     And This Feedback is in the database: "1", "Matt Paul", "Broken Bot", "It came broken!!!", and "false"
     Then I should see the "Projects" link
     When I click on the "Projects" link
-    Then I should be on the "Project List" page
+    Then I should be on the "Available Project Kits" page
     And I should see the "Robot" link
     Then I click on the "Robot" link
     And I should be on the "Robot" page

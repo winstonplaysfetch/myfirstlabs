@@ -13,7 +13,7 @@ Feature: Navigate website
     But I should not see the "Feedback" link
     And I should not see the "Signout" link
     When I click on the "Projects" link
-    Then I should be on the "Project List" page
+    Then I should be on the "Available Project Kits" page
     And I should see the "Robot" link
     But I should not see the "New Project" link
     Then I click on the "Robot" link
@@ -21,10 +21,10 @@ Feature: Navigate website
     Then I click on the "Home" link
     And I am on the homepage
     Then I click on the "Contact" link
-    And I should be on the "Contact Page" page
+    And I should be on the "Contact My First Labs!" page
     And I should see the "Back to Projects" link
     Then I click on the "Back to Projects" link
-    And I should be on the "Project List" page
+    And I should be on the "Available Project Kits" page
     Then I click on the "Robot" link
     And I should be on the "Robot" page
     And I should see the "Back to Projects" link

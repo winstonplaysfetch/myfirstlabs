@@ -9,26 +9,26 @@ table, tr, th, td {
 /* START OF COLUMN FORMATING */
   /* Project */
     .info-1 {
-      width: 128px;
+      min-width: 128px;
     }
   
   /* Name */
     .info-2 {
-      width: 150px;
+      min-width: 150px;
     }
 
   /* Subject */
     .info-3 {
-      width: auto;
+      min-width: 400px;
     }
     
   /* Visible */
     .info-4 {
-      width: 52px;
+      min-width: 52px;
     }
   
   /* Link to Details */
     .info-5 {
-      width: 113px;
+      min-width: 113px;
     }
 /* END OF COLUMN FORMATING */
