@@ -1,6 +1,6 @@
 <div id="container">
   <% if current_user %>
-    <h2>Feedback List</h2>
+    <h2>Feedback Editor</h2>
   
     <table class="info">
       <tr>
@@ -29,7 +29,7 @@
             No
           <% end %>
         </td>
-        <td class="info-5"><%= link_to "View Feedback Details", feedback_path(feedback), :class=>"forward" %></td>
+        <td class="info-5"><%= link_to "View/Edit Feedback", feedback_path(feedback), :class=>"forward" %></td>
 
       </tr>
       <% end %>
