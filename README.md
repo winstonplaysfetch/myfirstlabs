@@ -5,9 +5,10 @@ My First Labs website
 Ruby v2.3
 Rails v5.0.1
 
-After cloning, do this:
-Run bundle install to install all gems. 
-Run rails db:migrate to create all databases
+After cloning, run comands:
+Install gems: bundle install
+Create database: rails db:migrate
+Run server: rails server -b $IP -p $PORT
 
 Contributors: 
 Vincent Popp,
