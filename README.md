@@ -5,9 +5,11 @@ My First Labs website
 Ruby v2.3
 Rails v5.0.1
 
-After cloning, run comands:
+After Cloning To-Do:
 Install gems: bundle install
 Create database: rails db:migrate
+Create omniauth.rb (google auth) and secrets.yml (signed cookies) files; 
+ sample files provided
 Run server: rails server -b $IP -p $PORT
 
 Contributors: 
