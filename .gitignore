@@ -18,4 +18,8 @@
 !/tmp/.keep
 
 # Ignore Byebug command history file.
-.byebug_history
+.byebug_histor
+
+# Ignore secret-containing files
+config/initializers/omniauth.rb
+config/secrets.yml
