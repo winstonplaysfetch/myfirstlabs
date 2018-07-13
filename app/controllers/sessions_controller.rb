@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_path
   end
-  
 =begin
 #Some other guy's code:  
   def google_oauth2
