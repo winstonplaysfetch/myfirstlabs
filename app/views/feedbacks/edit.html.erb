@@ -11,9 +11,9 @@
     <br><br><br> <!-- Much needed whitespace -->
   
     <%= form_for :feedback, url: feedback_path, method: :patch do |f| %>
-      <p><%= f.label 'Checking this box will allow guest to view this feedback!' %>
-      <br><br><br><br>
-      <%= f.check_box :is_approved %></p>
+      <br>
+      <%= f.check_box :is_approved %>
+      <%= f.label 'Allow this feedback to be visible under the relevant project' %>
       <br> <!-- Much needed whitespace -->
       <p><%= f.submit "Save Feedback Approval Settings" %></p>
     <% end %>
