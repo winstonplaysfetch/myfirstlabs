@@ -1,4 +1,6 @@
 class FeedbacksController < ApplicationController
+  before_action :logged_in_user
+  
   def create
     @project = Project.find(params[:project_id])
     @feedback = @project.feedbacks.create(feedback_params)
@@ -37,7 +39,14 @@ class FeedbacksController < ApplicationController
   end
 
   private
-    def feedback_params
-      params.require(:feedback).permit(:commenter, :title, :body, :is_approved)
+  def feedback_params
+    params.require(:feedback).permit(:commenter, :title, :body, :is_approved)
+  end
+  
+  def logged_in_user
+    unless current_user
+    flash[:danger] = "Administrative function; Please log in"
     end
+  end
+
 end
