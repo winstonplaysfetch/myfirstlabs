@@ -1,4 +1,4 @@
-class User < ApplicationRecord
-    before_save { self.email = email.downcase }
-    has_secure_password
+# Schema: User(name:string, password_digest:string)
+class User < ActiveRecord::Base
+  has_secure_password
 end
