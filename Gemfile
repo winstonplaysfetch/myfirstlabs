@@ -34,7 +34,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Google Authentication gem
 #gem "omniauth-google-oauth2", "~> 0.2.1"
+# Gem for encrypting passwords
+gem 'bcrypt', '3.1.12'
 
 group  :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

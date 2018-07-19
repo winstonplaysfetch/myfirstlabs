@@ -1,13 +1,17 @@
-<h1>Sessions#create</h1>
-<p>Find me in app/views/sessions/create.html.erb</p>
+<div id="container">
+  <h2>Administrator Login</h2>
+ <%= form_for :session, url: login_path do |f| %>
+  <p>
+  <%= f.label :email %><br>
+  <%= f.email_field :email, placeholder: "email" %>
+  </p>
 
-    <%= form_for(:session, url: login_path) do |f| %>
+  <p>
+  <%= f.label :password %><br>
+  <%= f.password_field :password, placeholder: "password" %>  
+  </p>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+  <p><%= f.submit "Log in"%></p> 
+<% end %> 
+</div>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.submit "Log in", class: "btn btn-primary" %>
-    <% end %>
