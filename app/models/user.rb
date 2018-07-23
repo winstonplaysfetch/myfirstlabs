@@ -1,12 +1,11 @@
-class User < ApplicationRecord
-    def self.from_omniauth(auth)
-        where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
-            user.provider = auth.provider
-            user.uid = auth.uid
-            user.name = auth.info.name
-            user.oauth_token = auth.credentials.token
-            user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-            user.save!
-        end
-    end
+# Schema: User(name:string, password_digest:string)
+class User < ActiveRecord::Base
+  has_secure_password
+  
+  # Returns the hash digest of the given string.
+  def User.digest(string)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                  BCrypt::Engine.cost
+    BCrypt::Password.create(string, cost: cost)
+  end
 end
