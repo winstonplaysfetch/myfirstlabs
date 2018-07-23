@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  get 'login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
-  get 'signout', to: 'sessions#destroy', as: 'signout'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :projects do
     resources :feedbacks

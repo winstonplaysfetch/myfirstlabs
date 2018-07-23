@@ -12,10 +12,10 @@
     <div id="nav_wrapper">
       <ul>
         <% if current_user %>
-          <li><%= link_to "Signout", signout_path, id: "sign_out" %></li>
+          <li><%= link_to "Log Out", logout_path, id: "logout" %></li>
           <li><%= link_to 'Feedback', feedbacks_path %></li>
         <% else %>
-          <li><%= link_to "Staff Login", "sessions/new" %></li>
+          <li><%= link_to "Staff Login", login_path, id: "login" %></li>
         <% end %>
         <li><%= link_to 'Contact', contacts_path %></li>
         <li><%= link_to 'Projects', projects_path %></li>
