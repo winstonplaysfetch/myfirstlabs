@@ -2,19 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-width: 800px; 
-margin-left: auto; 
-margin-right:auto;
-font-family: Arial; 
-color: #EEE8AA; 
-text-align:center; 
-background-image: url("http://i.imgur.com/3Lawbdu.jpg");
+	font-family: Arial; 
+	color: #EEE8AA; 
+	background-image: url("http://i.imgur.com/3Lawbdu.jpg");
 }
 
 h1 {
-font-family: 'Almendra Display', cursive;
-font-variant: small-caps;
-font-size: 5em;
+	font-family: 'Almendra Display', cursive;
+	font-variant: small-caps;
+	font-size: 3em;
+}
+
+#container h1 {
+	font-size: 5em !important;
 }
 
 h3 {
@@ -55,10 +55,6 @@ button:hover, button:active {
 color: #EEE8AA;
 background-color: #331E0E;
 transition: background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-@keyframes slider {
-
 }
 
 #slider {
