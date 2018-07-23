@@ -1,37 +1,73 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 body {
-	font-family: Arial; 
-	color: #EEE8AA; 
-	background-image: url("http://i.imgur.com/3Lawbdu.jpg");
+width: 800px; 
+margin-left: auto; 
+margin-right:auto;
+font-family: Arial; 
+color: #EEE8AA; 
+text-align:center; 
+background-image: url("http://i.imgur.com/3Lawbdu.jpg");
 }
 
 h1 {
-	font-family: 'Almendra Display', cursive;
-	font-variant: small-caps;
-	font-size: 3em;
+font-family: 'Almendra Display', cursive;
+font-variant: small-caps;
+font-size: 5em;
 }
 
-#container h1 {
-	font-size: 5em !important;
+h3 {
+font-variant: small-caps;
+font-size: 25px;
 }
 
-#container {
-    width: 960px; 
-    margin-left: auto; 
-    margin-right:auto;
-    text-align:center; 
+a:link, a:visited {
+color: black;
+background-color: #A8632D;
+border: 1px solid black;
+padding: 12px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+border-radius: 10px;
+transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+a:hover, a:active {
+color: #EEE8AA;
+background-color: #331E0E;
+transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+button {
+	color: black;
+	background-color: #A8632D;
+	border: 1px solid black;
+	padding: 12px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 10px;
+}
+
+button:hover, button:active {
+color: #EEE8AA;
+background-color: #331E0E;
+transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+@keyframes slider {
+
 }
 
 #slider {
-	width: 40%;
-	height: 630px;
+	width: 100%;
+	height: 500px;
 	border: 1px solid black;
-	margin: auto;
+	margin: 0 auto;
 	position: relative;
-	background-color: black;
+
 }
 
 #slider>img {
@@ -41,8 +77,8 @@ h1 {
 }
 
 #slider>.button{
-	position: absolute;
-	float: left;
+	position: relative;
+	float:left;
 	width:50px;
 	height:50px;
 	border:none;
@@ -66,4 +102,3 @@ h1 {
 	box-shadow: -10px 0px 20px 0px black;
 	
 }
-
