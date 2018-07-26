@@ -30,14 +30,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
+ gem 'bcrypt', '~> 3.1.12'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-# Google Authentication gem
+# Use Google Authentication 
 #gem "omniauth-google-oauth2", "~> 0.2.1"
-# Gem for encrypting passwords
-gem 'bcrypt', '3.1.12'
+# Use mail-form mailer for Contact page
+gem 'mail_form'
 
 group  :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

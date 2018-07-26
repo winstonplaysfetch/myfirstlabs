@@ -1,27 +1,17 @@
 class ContactsController < ApplicationController
-    def index
-        @contacts = Contact.all
-    end
     
     def new
         @contact = Contact.new
     end
     
     def create
-        @contact = Contact.new(contact_params)
-        if @contact.save
-            redirect_to @contact
+        @contact = Contact.new(params[:contact])
+        @contact.request = request
+        if @contact.deliver
+            flash.now[:error] = nil
         else
+            flash.now[:error] = 'Error sending message.'
             render 'new'
         end
     end
-    
-    def show
-        @contact = Contact.find(params[:id])
-    end
-    
-    private
-        def contact_params
-            params.require(:contact).permit(:email, :body)
-        end
 end

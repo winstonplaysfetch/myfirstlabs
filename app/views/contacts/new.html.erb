@@ -1,0 +1,29 @@
+<div id="container">
+  <h2>Contact My First Labs!</h2>
+  <%= form_for @contact do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name, required: true, placeholder: "Name, Required" %>
+    </p>
+    
+    <p>
+      <%= f.label :email %><br>
+      <%= f.text_field :email, required: true,  placeholder: "Email, Required" %>
+    </p>
+    
+    <p>
+      <%= f.label :message %><br>
+      <%= f.text_area :message, required: true,  placeholder: "Message, Required" %>
+    </p>
+    
+    <p style= "display: none;">
+      <%= f.label :nickname %><br>
+      <%= f.text_area :nickname %>
+    </p>
+
+    <p><%= f.submit "Send Message" %></p>
+    
+  <% end %>
+  <br><br><br>
+  <%= link_to 'Back to Projects', projects_path, :class=>"backward" %>
+</div>
